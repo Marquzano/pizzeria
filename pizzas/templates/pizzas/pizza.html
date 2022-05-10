@@ -7,8 +7,8 @@
     <ul>
         {% for topping in toppings %}
             <li>
-                <!-- topping is not being shown even though there is a bulleted list -->
-                <p>{{ topping.text|linebreaks }}</p>
+                <!-- topping was not being shown because we were not accessing the name attribute of topping properly -->
+                <p>{{ topping.name|linebreaks }}</p>
             </li>
         {% empty %}
             <li>
